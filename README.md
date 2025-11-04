@@ -17,4 +17,17 @@ Users can create, update, and delete tasks with real-time UI updates and a clean
 **Version Control:** Git & GitHub
 
 ## Running the project
+cd backend
+npm install
+npm start
+
+cd frontend
+npm install
+ng serve
+
+## Future Enhancements
+- User Authentication (JWT)
+- Dark Mode
+- Sorting & Filtering
+
 
