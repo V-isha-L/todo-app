@@ -1,0 +1,9 @@
+<h2>Todo List</h2>
+
+<ul class="todo-list">
+  <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+</ul>
+
+<p *ngIf="todos.length === 0">
+  No todos yet! Add one above.
+</p>

@@ -1,0 +1,55 @@
+.todo-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+
+  &.completed {
+    .task-name {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+    background-color: #f8f9fa;
+    border-color: #e0e0e0;
+  }
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-name {
+  font-size: 1.1rem;
+}
+
+.task-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.priority {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+
+  // Dynamically set color based on priority class
+  &.low { background-color: #d1e7dd; color: #0f5132; }
+  &.medium { background-color: #fff3cd; color: #664d03; }
+  &.high { background-color: #f8d7da; color: #842029; }
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}

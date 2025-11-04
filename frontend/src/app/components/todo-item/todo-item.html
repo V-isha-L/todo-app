@@ -1,0 +1,23 @@
+<li class="todo-item-container" [class.completed]="todo.isCompleted">
+  
+  <div class="task-info">
+    <input 
+      type="checkbox" 
+      [checked]="todo.isCompleted" 
+      (change)="onToggleComplete()">
+    
+    <span class="task-name">{{ todo.taskName }}</span>
+  </div>
+
+  <div class="task-details">
+    <span class="priority" [class]="todo.priority.toLowerCase()">
+      {{ todo.priority }}
+    </span>
+
+    <span class="due-date" *ngIf="todo.dueDate">
+      Due: {{ todo.dueDate | date:'MMM d' }}
+    </span>
+    
+    <button class="delete-btn" (click)="onDelete()">Delete</button>
+  </div>
+</li>
